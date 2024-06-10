@@ -12,6 +12,9 @@
     padding-bottom: 20px;
     justify-content: flex-start;
 }
+h1{
+    font-family: Monocraft;
+}
 .card__link{
     text-decoration: none;
 }

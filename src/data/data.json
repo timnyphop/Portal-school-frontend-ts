@@ -43,6 +43,7 @@
         "place": "Красноярск",
         "termedu": "3 года 10 месяцев",
         "description":"Колледж не очень популярен в Красноярском крае, но имеет хорошие отзывы.Упор делается именно в практическое применение полученных знаний.Диплом имеет подтверждение WordSkills",
+        "imagelink":"https://static.ucheba.ru/pix/uz_photo/20501.full.webp",
         "classes":"College",
         "raitingtop":28,
         "raitingmedium":72,
@@ -55,6 +56,7 @@
         "place": "Красноярск",
         "termedu": "3 года 10 месяцев",
         "description":"Колледж не очень популярен в Красноярском крае, но имеет хорошие отзывы.Упор делается именно в практическое применение полученных знаний.Диплом не имеет подтверждение WordSkills",
+        "imagelink":"https://i.vuzopedia.ru/storage/app/uploads/public/5f8/d2c/d28/5f8d2cd28c43e791490630.jpg",
         "classes":"College",
         "raitingtop":48,
         "raitingmedium":72,
@@ -67,58 +69,12 @@
         "place": "Красноярск",
         "termedu": "4 года ",
         "description":"Вуз  очень популярен в Красноярском крае,имеет хорошие отзывы.Упор делается именно в практическое применение полученных знаний.Диплом  имеет подтверждение WordSkills",
+        "imagelink":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZmnYGyMhdYvZaD2ewdoZ5SxW9AFA4uQNFuw&s",
         "classes":"vuz",
         "raitingtop":918,
         "raitingmedium":72,
         "raitingbad":617,
         "likes":0   
-    },
-    {
-        "id":7,
-        "name": "Сибирский федеральный университет",
-        "place": "Красноярск",
-        "termedu": "4 года ",
-        "description":"Вуз  очень популярен в Красноярском крае,имеет хорошие отзывы.Упор делается именно в практическое применение полученных знаний.Диплом  имеет подтверждение WordSkills",
-        "classes":"vuz",
-        "raitingtop":118,
-        "raitingmedium":72,
-        "raitingbad":21,
-        "likes":0
-    },
-    {
-        "id":8,
-        "name": "Сибирский федеральный университет",
-        "place": "Красноярск",
-        "termedu": "4 года ",
-        "description":"Вуз  очень популярен в Красноярском крае,имеет хорошие отзывы.Упор делается именно в практическое применение полученных знаний.Диплом  имеет подтверждение WordSkills",
-        "classes":"vuz",
-        "raitingtop":8,
-        "raitingmedium":72,
-        "raitingbad":21,
-        "likes":0  
     }
-    ,{
-        "id":9,
-        "name": "Сибирский федеральный университет",
-        "place": "Красноярск",
-        "termedu": "4 года ",
-        "description":"Вуз  очень популярен в Красноярском крае,имеет хорошие отзывы.Упор делается именно в практическое применение полученных знаний.Диплом  имеет подтверждение WordSkills",
-        "classes":"vuz",
-        "raitingtop":11,
-        "raitingmedium":72,
-        "raitingbad":1,
-        "likes":0
-    },
-    {
-        "id":10,
-        "name": "Сибирский федеральный университет",
-        "place": "Красноярск",
-        "termedu": "4 года ",
-        "description":"Вуз  очень популярен в Красноярском крае,имеет хорошие отзывы.Упор делается именно в практическое применение полученных знаний.Диплом  имеет подтверждение WordSkills",
-        "classes":"",
-        "raitingtop":11,
-        "raitingmedium":72,
-        "raitingbad":1,
-        "likes":0
-    }
+    
     ]

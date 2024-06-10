@@ -8,10 +8,24 @@ interface CardsProps{
 }
 
 export  const Cards:FC<CardsProps>=({data})=>{
-    
+    const Colloges=data.filter(data=> data.classes === 'College');
+    const University=data.filter(data=>data.classes==='vuz');
     return(
     <div>
-        {data.map((data,index,item)=>
+        <h1>Colloges:</h1>
+        {Colloges.map((data,index,item)=>
+            <div className={Styles['container']} key={index}>
+                <Link to={`/school/${data.id}`} key={index}>
+                    <div className={Styles['Cards']}>
+                    <h1 className={Styles['Card-title__text']}key={data.id}>{data.name}</h1>
+                    <p className={Styles['Card-description__text']} key={`${data.id}-${index}`}>{data.description}</p>
+                 </div>
+            </Link>
+         </div>
+                )
+            }
+            <h1>University: </h1>
+        {University.map((data,index,item)=>
             <div className={Styles['container']} key={index}>
                 <Link to={`/school/${data.id}`} key={index}>
                     <div className={Styles['Cards']}>
@@ -23,6 +37,8 @@ export  const Cards:FC<CardsProps>=({data})=>{
                 )
             }
 
+            
+            
         </div>
     )
 }
