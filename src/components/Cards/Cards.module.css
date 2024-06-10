@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Monocraft';
+    src: url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap") format('woff2'),
+  }
+  
+.CardsList{
+    display: flex;
+    border-bottom: 1px solid black;
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на следующий ряд */
+    gap: 40px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+}
+.card__link{
+    text-decoration: none;
+}
+.cardsList_title{
+    font-family: Monocraft;
+    font-size: 30px;
+}
+.container {
+    max-width: 1440px;
+    padding: 0 140px;
+    box-sizing: border-box;
+    margin: 0 auto;
+   }
+.cards_container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.Cards{
+    max-width: 300px;
+    border: 1px solid black;
+    padding: 15px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    color: black;
+    align-content: stretch;
+}
+.Card-title__text{
+    font-family: Monocraft;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+.Card-description__text{
+    font-family: Monocraft;
+    font-size: 14px;
+    cursor: pointer;
+}

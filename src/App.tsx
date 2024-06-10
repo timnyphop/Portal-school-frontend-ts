@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+import {FC } from "react";
+import  {Cards}  from "./components/Cards/Cards";
+import React from "react";
+import data from './data/data.json';
+import { Ischool } from "./types/types";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import School from "./school/[id]/page.js";
+export const App:FC=()=>{
+  const data2:Ischool[]=data as Ischool[];
+  return(
+      <main>
+        <Routes>
+          <Route path="/" element={<Cards data={data2} />} />
+          <Route path="/school/:id" element={<School data={data2} />} />
+        </Routes>
+      </main>
+  )
+};
