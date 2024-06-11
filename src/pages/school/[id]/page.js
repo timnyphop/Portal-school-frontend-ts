@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
-import { getSchoolById } from '../../data/data-utils';
-import { raitingSchool } from '../../data/data-utils';
+import { getSchoolById } from '../../../data/data-utils';
+import { raitingSchool } from '../../../data/data-utils';
 import Styles from './school.module.css';
 export default function School(props) {
     const { id } = useParams(); // Извлекаем id из параметров URL// Проверяем значение id
@@ -9,7 +9,7 @@ export default function School(props) {
     // Получаем информацию о школе по id
     const school = getSchoolById(id);
     const averageRaiting=raitingSchool(school);
-    const classOfSchool=school.classes=="College"?"колледж":school.classes=="Vuz"?"вуз":"образовательную организацию";
+    const classOfSchool=school.classes==="College"?"колледж":school.classes==="Vuz"?"вуз":"образовательную организацию";
     return (
         <div className={Styles["container"]}>
         <div className={Styles['information__block']}>

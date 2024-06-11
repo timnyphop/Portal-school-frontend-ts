@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Monocraft';
+    src: url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap") format('woff2'),
+  }
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 140px;
+    box-sizing: border-box;
+    margin: 0 auto;
+   }
+.footer {
+    background-color: #fff;
+    margin-top: 10px;
+    color: white;
+    border-top:1px solid black;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+  }
+.footer-content {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.button{
+    width:100%;
+    max-width: 100px;
+    text-decoration: none;
+}
+.logo {
+    width:212px;
+}
+
+.social {
+    display:flex;
+    gap:24px;
+}
+
+.nav-menu{
+    display: flex;
+    list-style: none;
+    gap:24px;
+    padding: 0;
+}
+.List-foot{
+    display: flex;
+    list-style: none;
+    gap:24px;
+    padding: 0;
+}
+.social a{
+    font-size:20px;
+    color:#121723;
+    text-decoration:none;
+    font-family: Monocraft;
+}
+.logo-text{
+    font-size:20px;
+    color:#121723;
+    text-decoration:none;
+    font-family: Monocraft;
+    font-weight: 700;
+}
+.new {
+    font-family: 'IBM Plex Mono';
+    font-size: 48px;
+    color:#121723;
+    margin-top:32px;
+}
+
+.link-social {
+    font-weight: 700;
+}
+.link {
+    text-decoration: none;
+}
+  

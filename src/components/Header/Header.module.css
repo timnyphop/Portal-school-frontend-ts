@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Monocraft';
+    src: url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap") format('woff2'),
+  }
+  
+.Header {
+    background-color: #fff;
+    padding:30px 0px;
+    border-bottom: 1px solid black;
+}
+.header-content {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.button{
+    width:100%;
+    max-width: 100px;
+    text-decoration: none;
+}
+.logo {
+    width:212px;
+}
+
+.social {
+    display:flex;
+    gap:24px;
+}
+
+.nav-menu{
+    display: flex;
+    list-style: none;
+    gap:24px;
+    padding: 0;
+}
+.List-hed{
+    display: flex;
+    list-style: none;
+    gap:24px;
+    padding: 0;
+}
+.social a{
+    font-size:20px;
+    color:#121723;
+    text-decoration:none;
+    font-family: Monocraft;
+}
+.logo-text{
+    font-size:20px;
+    color:#121723;
+    text-decoration:none;
+    font-family: Monocraft;
+    font-weight: 700;
+}
+.new {
+    font-family: 'IBM Plex Mono';
+    font-size: 48px;
+    color:#121723;
+    margin-top:32px;
+}
+.container {
+    max-width: 1440px;
+    padding: 0 140px;
+    box-sizing: border-box;
+    margin: 0 auto;
+   }
+.link-social {
+    font-weight: 700;
+}
+.link {
+    text-decoration: none;
+}
