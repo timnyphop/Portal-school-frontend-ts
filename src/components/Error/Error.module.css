@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Monocraft';
+    src: url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap") format('woff2'),
+  }
+.error__title{
+    font-family: Monocraft;
+    font-size:42px;
+    display: flex;
+    justify-content: center;
+}
+.error__untitle{
+    font-family: Monocraft;
+    font-size:32px;
+    display: flex;
+    justify-content: center;
+}

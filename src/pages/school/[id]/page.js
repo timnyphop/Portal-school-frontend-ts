@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { getSchoolById } from '../../../data/data-utils';
 import { raitingSchool } from '../../../data/data-utils';
 import Styles from './school.module.css';
-export default function School(props) {
+export default function Ochool(props) {
     const { id } = useParams(); // Извлекаем id из параметров URL// Проверяем значение id
     // Функция для поиска школы по id
 
