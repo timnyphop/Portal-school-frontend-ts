@@ -9,4 +9,5 @@ export interface Ischool{
     "raitingtop":number,
     "raitingmedium":number,
     "raitingbad":number,
+    "likes":number
 }

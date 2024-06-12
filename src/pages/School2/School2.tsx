@@ -8,14 +8,15 @@ interface data{
     data:Ischool[];
 }
 export const School=({data}:data)=>{
-  const [likes,setLikes]=useState(1);
-  const addLikes=()=>{
-    setLikes(likes+1);
-  }
+  
   const isAuth=true;
     const {id}=useParams();
     const id2=Number(id);
     const school=data[id2-1];
+    const [likes,setLikes]=useState(school.likes);
+    const addLikes=()=>{
+    setLikes(likes+1);
+  }
     const averageRaiting=raitingSchool(school);
     const classOfSchool=school.classes==="College"?"колледж":school.classes==="Vuz"?"вуз":"образовательную организацию";
     
@@ -34,7 +35,7 @@ export const School=({data}:data)=>{
           <div className={Styles['school-star__raiting']}>
             </div>
             <div className={Styles['school-likes__column']}>
-              <button className={Styles['school-likes__button']} onClick={addLikes} disabled={isAuth}>Like {likes}</button>
+              <button className={Styles['school-likes__button']}  disabled={!isAuth} onClick={addLikes}>Like {school.likes}</button>
             </div>
           </div>
           <div className={Styles['school-image__block']}>
