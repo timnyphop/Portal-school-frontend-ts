@@ -1,12 +1,18 @@
 import Styles from './School2.module.css';
 import { useParams } from "react-router-dom";
 import { Ischool } from "../../types/types";
-import { ErrorNotFound } from "../../components/Error/Error";
+import { ErrorNotFound } from "../../pages/Error/Error";
 import { raitingSchool } from "../../data/data-utils";
+import { useState } from 'react';
 interface data{
     data:Ischool[];
 }
 export const School=({data}:data)=>{
+  const [likes,setLikes]=useState(1);
+  const addLikes=()=>{
+    setLikes(likes+1);
+  }
+  const isAuth=true;
     const {id}=useParams();
     const id2=Number(id);
     const school=data[id2-1];
@@ -21,9 +27,14 @@ export const School=({data}:data)=>{
         <div className={Styles['column_information']}>
           <h1 className={Styles['school-title__name']}>{school.name}</h1>
           <p className={Styles['school-text__description']}>{school.description}</p>
+
           <h3 className={Styles['school-title__raiting']}>Рейтинг: {averageRaiting}</h3>
+
           <h4>Учился здесь? Оцени {classOfSchool} по 5 бальной шкале: </h4>
           <div className={Styles['school-star__raiting']}>
+            </div>
+            <div className={Styles['school-likes__column']}>
+              <button className={Styles['school-likes__button']} onClick={addLikes} disabled={isAuth}>Like {likes}</button>
             </div>
           </div>
           <div className={Styles['school-image__block']}>

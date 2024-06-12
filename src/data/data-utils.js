@@ -4,6 +4,7 @@ export const getSchoolById = (id,props) => {
     return foundSchool;
 }
 export const raitingSchool=(school)=>{
+    if(school){
     const raitingTop=Number(school.raitingtop);
     const raitingBad=Number(school.raitingbad);
     const raitingMedium=Number(school.raitingmedium);
@@ -14,4 +15,8 @@ export const raitingSchool=(school)=>{
     }
     const averageRaiting=(sumRaiting/(raitingTop+raitingMedium+raitingBad)).toFixed(2);
     return averageRaiting;
+  }else{
+    const averageRaiting=0
+    return averageRaiting;
+  }
   }
