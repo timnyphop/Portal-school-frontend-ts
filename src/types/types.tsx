@@ -1,13 +1,9 @@
-export interface Ischool{
-    "id":number,
-    "name":string,
-    "place":string,
-    "termedu":string,
-    "description":string,
-    "imagelink":string,
-    "classes":string,
-    "raitingtop":number,
-    "raitingmedium":number,
-    "raitingbad":number,
-    "likes":number
+export interface Ischool {
+  _id: string;
+  name: string;
+  classes: string;
+  raitingtop: string;
+  raitingmedium: string;
+  reitingbad: string;
+  likes: string;
 }
