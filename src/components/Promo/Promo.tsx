@@ -7,7 +7,7 @@ export const Promo = () => {
         <div className="column-information__block">
           <h1 className={Styles["main_title_promo"]}>Промокод</h1>
           <h2 className={Styles["main__title"]}>
-            Хочешь получить промокод на vip подписку😉 ?
+            Хочешь получить промокод на vip подписку 😉 ?
           </h2>
           <h3 className={Styles["main__untitle"]}>
             Чтобы получить промокод для получения скидки на vip подписку тебе

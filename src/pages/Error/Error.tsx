@@ -5,7 +5,7 @@ export const ErrorNotFound: FC = () => {
   return (
     <>
       <h1 className={Styles["error__title"]}>Error 404</h1>
-      <h2 className={Styles["error__untitle"]}> Not found🫠</h2>
+      <h2 className={Styles["error__untitle"]}> Not found 🫠</h2>
       <div className={Styles["error-button__block"]}>
         <Link to="/" className={Styles["error-button__link"]}>
           <button className={Styles["error__button"]}>
