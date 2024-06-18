@@ -6,7 +6,6 @@ export const App: FC = () => {
   return (
     <>
       <RouterProvider router={routes} />
-      <h1>{}</h1>
     </>
   );
 };

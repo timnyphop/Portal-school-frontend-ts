@@ -1,68 +1,71 @@
 @font-face {
-    font-family: 'Monocraft';
-    src: url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap") format('woff2'),
-  }
-.card-title{
-    font-family:Monocraft;
+  font-family: "Monocraft";
+  src: url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap")
+    format("woff2");
 }
-.CardsList{
-    display: flex;
-    flex-wrap: wrap; /* Позволяет карточкам переноситься на следующий ряд */
-    gap: 40px;
-    margin-top: 20px;
-    padding-bottom: 20px;
-    justify-content: flex-start; 
+.card-title {
+  font-family: Monocraft;
 }
-.line{
-    width:100%;
-    height: 1px;
-    background-color: black;
+.CardsList {
+  display: flex;
+  flex-wrap: wrap; /* Позволяет карточкам переноситься на следующий ряд */
+  gap: 40px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  justify-content: flex-start;
 }
-.card__link{
-    text-decoration: none;
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
 }
-.cardsList_title{
-    font-family: Monocraft;
-    font-size: 30px;
+.card__link {
+  text-decoration: none;
+}
+.cardsList_title {
+  font-family: Monocraft;
+  font-size: 30px;
+}
+.card-description__text {
+  font-family: Monocraft;
 }
 .container {
-    max-width: 1440px;
-    padding: 0 140px;
-    box-sizing: border-box;
-    margin: 0 auto;
-   }
-.cards_container{
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  max-width: 1440px;
+  padding: 0 140px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
-.Cards{
-    max-width: 300px;
-    border: 1px solid black;
-    padding: 0 15px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    color: black;
-    align-content: stretch;
-    height: 100%;
+.cards_container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.Cards {
+  max-width: 300px;
+  border: 1px solid black;
+  padding: 0 15px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  color: black;
+  align-content: stretch;
+  height: 100%;
 }
 
-.Card-title__text{
-    font-family: Monocraft;
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
+.Card-title__text {
+  font-family: Monocraft;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
 }
-.Card-description__text{
-    font-family: Monocraft;
-    font-size: 14px;
-    cursor: pointer;
+.Card-description__text {
+  font-family: Monocraft;
+  font-size: 14px;
+  cursor: pointer;
 }
-.center-card{
-    
-    display: flex;
+.center-card {
+  display: flex;
 }

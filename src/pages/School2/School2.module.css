@@ -1,85 +1,83 @@
-
 @font-face {
-    font-family: 'Monocraft';
-    src: url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap") format('woff2'),
-  }
-.container{
-    width:100%;
-    max-width: 1440px;
-    padding: 0 140px;
-    margin:0 auto;
-    display: flex;
-    font-family: 'Monocraft';
-    justify-content: space-between;
+  font-family: "Monocraft";
+  src: url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap")
+    format("woff2");
 }
-.column_information{
-    flex-direction: column;
-    cursor: default;
-    margin-top: 35px;
-    display: flex;
-    width: 100%;
-    max-width: 500px;
-    height: 500px;
-}
-.school-likes__button{
-    width: 100%;
-    max-width: 200px;
-    height: 100%;
-    max-height: 100px;
-    font-family: Monocraft;
-    font-size:24px;
-    background-color: white;
-    color:black;
-    border-radius: 10px;
-    padding: 15px;
-    border:1px solid black;
-    transition: 0.2s all;
-}
-.school-likes__button:hover{
-    background-color:#f7f7f5;
 
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 140px;
+  margin: 0 auto;
+  display: flex;
+  font-family: "Monocraft";
+  justify-content: space-between;
 }
-.school-title__name{
-    width:100%;
-    max-width: 500px;
-    font-size: 24px;
-    font-family: 'Monocraft';
-    cursor: poiner;
-    margin: 0;
-    
+.column_information {
+  flex-direction: column;
+  cursor: default;
+  margin-top: 35px;
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  height: 800px;
 }
-.school-text__description{
-    width: 100%;
-    max-width: 350px;
-    font-size: 16px;
+.school-likes__button {
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  max-height: 100px;
+  font-family: Monocraft;
+  font-size: 24px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid black;
+  transition: 0.2s all;
 }
-.school-image__block{
-    margin-top:35px;
-    display: flex;
-    justify-content: flex-start;
+.school-likes__button:hover {
+  background-color: #f7f7f5;
 }
-.school-image__img{
-    width: 400px;
-    height: 400px;
-    display: flex;
+.school-title__name {
+  width: 100%;
+  max-width: 500px;
+  font-size: 24px;
+  font-family: "Monocraft";
+  cursor: poiner;
+  margin: 0;
 }
-.information__block{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+.school-text__description {
+  width: 100%;
+  max-width: 350px;
+  font-size: 16px;
+}
+.school-image__block {
+  margin-top: 35px;
+  display: flex;
+  justify-content: flex-start;
+}
+.school-image__img {
+  width: 400px;
+  height: 400px;
+  display: flex;
+}
+.information__block {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1160px;
+}
+@media (width <= 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  .information__block {
+    flex-direction: column;
+    justify-content: column;
+    max-width: 400px;
     align-items: center;
-    max-width: 1160px;
-}
-@media (width <= 768px){
-    .container{
-        padding: 0 16px;
-    
-    }
-    .information__block{
-        flex-direction: column;
-        justify-content: column;
-        max-width: 400px;
-        align-items: center;
-        justify-content: center;
-    }
+    justify-content: center;
+  }
 }

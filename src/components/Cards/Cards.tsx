@@ -33,6 +33,10 @@ export const Cards = () => {
             >
               <div className={Styles["Cards"]}>
                 <h1 className={Styles["Card-title__text"]}>{school.name}</h1>
+                <p className={Styles["Card-description__text"]}>
+                  Понравилось:
+                  {school.likes}
+                </p>
               </div>
             </Link>
           ))}
@@ -50,7 +54,9 @@ export const Cards = () => {
             >
               <div className={Styles["Cards"]}>
                 <h1 className={Styles["Card-title__text"]}>{school.name}</h1>
-                <p className={Styles["Card-description__text"]}></p>
+                <p className={Styles["Card-description__text"]}>
+                  Понравилось:{school.likes}
+                </p>
               </div>
             </Link>
           ))}

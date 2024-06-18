@@ -6,4 +6,6 @@ export interface Ischool {
   raitingmedium: string;
   reitingbad: string;
   likes: string;
+  description: string;
+  imageUrl: string;
 }
