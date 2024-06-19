@@ -21,8 +21,12 @@ export const Promo = () => {
               <li className={Styles["list__block"]}>Написать комментарий</li>
             </ul>
           </h3>
-          <Link to="/promo">
-            <button>Ты все сделал?</button>
+          <Link to="/promo" className={Styles["promo-text__link"]}>
+            <div className={Styles["promo__block"]}>
+              <button className={Styles["promo__button"]}>
+                <p className={Styles["promo__text"]}>Ты все сделал?</p>
+              </button>
+            </div>
           </Link>
         </div>
       </div>

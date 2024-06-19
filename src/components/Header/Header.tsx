@@ -40,6 +40,7 @@ export const Header = () => {
                 </ul>
               </nav>
             </div>
+            <div>Войти</div>
           </div>
         </div>
       </header>

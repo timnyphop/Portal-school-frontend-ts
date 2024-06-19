@@ -22,10 +22,8 @@ export const School = () => {
         .catch((error) => setError("Fetch error: " + error.message));
     }
   }, [schools]);
-
   const school = schools.find((school) => school._id === schoolId);
   if (loading) {
-    console.log("идет загрузочка");
     return <div className={Styles["preloader"]}>Загрузка...</div>;
   }
   if (error) {
@@ -48,7 +46,7 @@ export const School = () => {
               </p>
 
               <h3 className={Styles["school-title__raiting"]}>
-                {averageRaiting}
+                Рейтинг: {averageRaiting}
               </h3>
               <h4>Учился здесь? Оцени по 5 бальной шкале: </h4>
               <div className={Styles["school-star__raiting"]}></div>

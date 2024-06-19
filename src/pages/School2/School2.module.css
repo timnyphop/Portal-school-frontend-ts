@@ -20,7 +20,7 @@
   display: flex;
   width: 100%;
   max-width: 500px;
-  height: 800px;
+  height: 100%;
 }
 .school-likes__button {
   width: 100%;

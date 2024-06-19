@@ -1,29 +1,57 @@
 @font-face {
-    font-family: 'Monocraft';
-    src: url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap") format('woff2'),
+  font-family: "Monocraft";
+  src: url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap")
+    format("woff2");
 }
 .container {
   max-width: 1440px;
   padding: 0 140px;
   box-sizing: border-box;
   margin: 0 auto;
- }
- .main_title_promo{
-  font-family: Monocraft;
-  font-size:42px;
- }
-.main__title{
-    width: 100%;
-    max-width: 800px;
-    font-family: Monocraft;
-    font-size: 34px;
 }
-.main__untitle{
+.main_title_promo {
+  font-family: Monocraft;
+  font-size: 42px;
+}
+.main__title {
+  width: 100%;
+  max-width: 800px;
+  font-family: Monocraft;
+  font-size: 34px;
+}
+.main__untitle {
   font-family: Monocraft;
   font-size: 18px;
 }
-.list__block{
+.list__block {
   text-decoration: none;
   font-family: Monocraft;
   font-size: 14px;
+}
+.promo__block {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.promo__button {
+  font-size: 24px;
+  background-color: white;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  max-height: 80px;
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s all;
+}
+.promo__button:hover {
+  scale: 1.1;
+}
+.promo-text__link {
+  text-decoration: none;
+  padding: 0;
+}
+.promo__text {
+  padding: 0;
 }

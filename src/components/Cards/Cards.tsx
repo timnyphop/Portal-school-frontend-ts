@@ -7,18 +7,22 @@ import { getSchool } from "../../api/api-utils";
 export const Cards = () => {
   const [schools, setSchools] = useState<Ischool[]>([]);
   const [error, setError] = useState<string | null>(null);
-
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     getSchool("http://localhost:3001/api/schools")
-      .then((data) => setSchools(data))
+      .then((data) => {
+        setSchools(data);
+        setLoading(false);
+      })
       .catch((error) => setError("Fetch error: " + error.message));
   }, [schools]);
-
   const colloges = schools.filter((schools) => schools.classes === "Колледж");
   const university = schools.filter(
     (schools) => schools.classes === "Университет"
   );
-
+  if (loading) {
+    return <h1>Загрузка...</h1>;
+  }
   return (
     <div className={Styles["container"]}>
       <h1 className={Styles["card-title"]}>Колледжи:</h1>
