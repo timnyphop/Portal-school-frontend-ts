@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
 import Styles from "./Header.module.css";
-
+import { useAuthModalStore } from "../../stores/App-store";
 export const Header = () => {
+  const { openModal } = useAuthModalStore();
+
   return (
     <div>
       <header className={Styles["Header"]}>
@@ -40,7 +43,10 @@ export const Header = () => {
                 </ul>
               </nav>
             </div>
-            <div>Войти</div>
+
+            <button onClick={openModal} className={Styles["login-button"]}>
+              Войти
+            </button>
           </div>
         </div>
       </header>

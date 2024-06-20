@@ -5,7 +5,7 @@ import { ErrorNotFound } from "../../pages/Error/Error";
 import { raitingSchool } from "../../data/data-utils";
 import { useState, useEffect } from "react";
 import { getSchool } from "../../api/api-utils";
-export const School = () => {
+export const SchoolPage = () => {
   const [schools, setSchools] = useState<Ischool[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);

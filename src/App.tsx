@@ -2,10 +2,12 @@ import { FC } from "react";
 import React from "react";
 import { RouterProvider } from "react-router-dom";
 import { routes } from "./routes/routes";
+import { AuthProvider } from "./contexts/context";
+
 export const App: FC = () => {
   return (
-    <body>
+    <AuthProvider>
       <RouterProvider router={routes} />
-    </body>
+    </AuthProvider>
   );
 };

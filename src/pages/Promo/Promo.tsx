@@ -6,13 +6,16 @@ export const PromoPage = () => {
     <>
       <input
         type="text"
-        placeholder="Введите ваш никнейм тик ток"
+        placeholder="Введите ваш никнейм"
         value={text}
         onChange={(e) => setText(e.target.value)}
         minLength={2}
         maxLength={10}
       ></input>
-      <p>Okey, if your nickname in TikTok is: {text}</p>
+      <p>
+        Okey,{text} теперь ты должен загрузить ниже скриншоты с потверждениями
+        лайков и комментария
+      </p>
     </>
   );
 };
