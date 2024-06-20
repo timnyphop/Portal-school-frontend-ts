@@ -24,10 +24,6 @@ export const routes = createBrowserRouter([
         path: "promo",
         element: <PromoPage />,
       },
-      {
-        path: "auth",
-        element: <AuthPage />,
-      },
     ],
   },
 ]);

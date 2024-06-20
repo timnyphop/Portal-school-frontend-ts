@@ -15,7 +15,7 @@ export const Cards = () => {
         setLoading(false);
       })
       .catch((error) => setError("Fetch error: " + error.message));
-  }, [schools]);
+  }, []);
   const colloges = schools.filter((schools) => schools.classes === "Колледж");
   const university = schools.filter(
     (schools) => schools.classes === "Университет"

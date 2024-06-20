@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Ischool } from "../../types/types";
 import { ErrorNotFound } from "../../pages/Error/Error";
 import { raitingSchool } from "../../data/data-utils";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { getSchool } from "../../api/api-utils";
 export const SchoolPage = () => {
   const [schools, setSchools] = useState<Ischool[]>([]);
@@ -22,7 +22,11 @@ export const SchoolPage = () => {
         .catch((error) => setError("Fetch error: " + error.message));
     }
   }, [schools]);
-  const school = schools.find((school) => school._id === schoolId);
+  const memoizedSchools = useMemo(() => schools, [schools]);
+  const school = useMemo(
+    () => schools.find((school) => school._id === id),
+    [schools, id]
+  );
   if (loading) {
     return <div className={Styles["preloader"]}>Загрузка...</div>;
   }

@@ -1,4 +1,5 @@
 import Styles from "./Banner.module.css";
+import React, { memo } from "react";
 export const Banner = () => {
   return (
     <section className={Styles["banner"]}>
@@ -21,6 +22,7 @@ export const Banner = () => {
         src="https://optim.tildacdn.com/tild6437-3164-4665-b464-383630356462/-/format/webp/max-nelson-KXkgOigCq.jpg"
         alt="Ноутбук"
         className={Styles["banner__image"]}
+        loading="lazy"
       />
     </section>
   );
