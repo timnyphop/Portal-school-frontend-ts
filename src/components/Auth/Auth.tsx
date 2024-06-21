@@ -6,9 +6,12 @@ import Styles from "./Auth.module.css";
 export const AuthModal: React.FC = () => {
   const { isModalOpen, closeModal } = useAuthModalStore();
   const { login } = useAuth();
+  const [isLogin, setIsLogin] = useState(true);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -17,24 +20,37 @@ export const AuthModal: React.FC = () => {
     setIsLoading(true);
     setError(null);
 
+    const payload = {
+      email,
+      password,
+      ...(isLogin ? {} : { name, age }),
+    };
+
     try {
-      const response = await fetch("http://localhost:3001/api/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        `http://localhost:3001/api/${isLogin ? "login" : "register"}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
 
       if (!response.ok) {
-        throw new Error("Failed to login");
+        const responseData = await response.json();
+        console.error("Server Error:", responseData);
+        throw new Error(
+          responseData.message || `Failed to ${isLogin ? "login" : "register"}`
+        );
       }
 
       const data = await response.json();
-      login(data); // Save user data and token
+      login(data);
       closeModal();
     } catch (error) {
-      console.log(error);
+      console.error("Caught Error:", error);
     } finally {
       setIsLoading(false);
     }
@@ -48,9 +64,33 @@ export const AuthModal: React.FC = () => {
         <span className={Styles.close} onClick={closeModal}>
           &times;
         </span>
-        <h2>Login</h2>
+        <h2>{isLogin ? "Login" : "Register"}</h2>
         <form onSubmit={handleSubmit} className={Styles.loginForm}>
           {error && <div className={Styles.error}>{error}</div>}
+          {!isLogin && (
+            <>
+              <div className={Styles.formGroup}>
+                <label htmlFor="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required={!isLogin}
+                />
+              </div>
+              <div className={Styles.formGroup}>
+                <label htmlFor="age">Age:</label>
+                <input
+                  type="number"
+                  id="age"
+                  value={age}
+                  onChange={(e) => setAge(e.target.value)}
+                  required={!isLogin}
+                />
+              </div>
+            </>
+          )}
           <div className={Styles.formGroup}>
             <label htmlFor="email">Email:</label>
             <input
@@ -76,7 +116,20 @@ export const AuthModal: React.FC = () => {
             disabled={isLoading}
             className={Styles.loginButton}
           >
-            {isLoading ? "Logging in..." : "Login"}
+            {isLoading
+              ? isLogin
+                ? "Logging in..."
+                : "Registering..."
+              : isLogin
+              ? "Login"
+              : "Register"}
+          </button>
+          <button
+            type="button"
+            onClick={() => setIsLogin(!isLogin)}
+            className={Styles.toggleButton}
+          >
+            {isLogin ? "Switch to Register" : "Switch to Login"}
           </button>
         </form>
       </div>

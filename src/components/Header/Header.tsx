@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import Styles from "./Header.module.css";
 import { useAuthModalStore } from "../../stores/App-store";
+import { useAuth } from "../../contexts/context";
+
 export const Header = () => {
   const { openModal } = useAuthModalStore();
+  const { isAuthenticated, user, logout } = useAuth();
 
   return (
     <div>
@@ -44,9 +47,18 @@ export const Header = () => {
               </nav>
             </div>
 
-            <button onClick={openModal} className={Styles["login-button"]}>
-              Войти
-            </button>
+            {isAuthenticated ? (
+              <div className={Styles["user-info"]}>
+                <span>{user?.name}</span>
+                <button onClick={logout} className={Styles["logout-button"]}>
+                  Выйти
+                </button>
+              </div>
+            ) : (
+              <button onClick={openModal} className={Styles["login-button"]}>
+                Войти
+              </button>
+            )}
           </div>
         </div>
       </header>

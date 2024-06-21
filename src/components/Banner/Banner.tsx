@@ -27,3 +27,4 @@ export const Banner = () => {
     </section>
   );
 };
+memo(Banner);
