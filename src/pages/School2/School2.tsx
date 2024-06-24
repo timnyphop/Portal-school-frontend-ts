@@ -5,13 +5,12 @@ import { ErrorNotFound } from "../../pages/Error/Error";
 import { raitingSchool } from "../../data/data-utils";
 import { useState, useEffect, useMemo } from "react";
 import { getSchool } from "../../api/api-utils";
+import { Preloader } from "../../components/Preloader/Preloader";
 export const SchoolPage = () => {
   const [schools, setSchools] = useState<Ischool[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const { id } = useParams<{ id: string }>();
-  const schoolId = id;
-
   useEffect(() => {
     if (schools.length === 0) {
       getSchool("http://localhost:3001/api/schools")
@@ -28,7 +27,7 @@ export const SchoolPage = () => {
     [schools, id]
   );
   if (loading) {
-    return <div className={Styles["preloader"]}>Загрузка...</div>;
+    return <Preloader />;
   }
   if (error) {
     return <div>{error}</div>;

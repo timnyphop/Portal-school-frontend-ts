@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Styles from "./Cards.module.css";
 import { Ischool } from "../../types/types";
 import { Link } from "react-router-dom";
 import { getSchool } from "../../api/api-utils";
+import { Preloader } from "../Preloader/Preloader";
 
 export const Cards = () => {
   const [schools, setSchools] = useState<Ischool[]>([]);
@@ -21,7 +22,7 @@ export const Cards = () => {
     (schools) => schools.classes === "Университет"
   );
   if (loading) {
-    return <h1>Загрузка...</h1>;
+    return <Preloader />;
   }
   return (
     <div className={Styles["container"]}>

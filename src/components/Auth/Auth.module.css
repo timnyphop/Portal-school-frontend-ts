@@ -54,3 +54,8 @@
 .loginButton:hover {
   background-color: #45a049;
 }
+.error {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
