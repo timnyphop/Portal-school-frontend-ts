@@ -5,7 +5,7 @@ import Styles from "./Auth.module.css";
 
 export const AuthModal: React.FC = () => {
   const { isModalOpen, closeModal } = useAuthModalStore(); // Zustand для управления состоянием модального окна
-  const { login } = useAuth(); // Вызов контекста для авторизации пользователя
+  const { login, saveToken } = useAuth(); // Вызов контекста для авторизации пользователя и сохранения токена
   const [isLogin, setIsLogin] = useState(true); // Состояние для переключения между логином и регистрацией
 
   const [email, setEmail] = useState(""); // Состояние для email
@@ -54,7 +54,8 @@ export const AuthModal: React.FC = () => {
 
       // Обработка успешного запроса
       const data = await response.json();
-      login(data); // Вызов функции login из контекста для сохранения данных пользователя
+      login({ name: data.name, email: data.email }); // Вызов функции login из контекста для сохранения данных пользователя
+      saveToken({ token: data.token }); // Сохранение токена
       closeModal(); // Закрытие модального окна
     } catch (error) {
       console.error("Caught Error:", error);

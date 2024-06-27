@@ -8,4 +8,8 @@ export interface Ischool {
   likes: string;
   description: string;
   imageUrl: string;
+  likesBy: string[];
+}
+export interface IlikeResponse {
+  message: string;
 }

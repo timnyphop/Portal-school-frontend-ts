@@ -6,10 +6,12 @@ import { raitingSchool } from "../../data/data-utils";
 import { useState, useEffect, useMemo } from "react";
 import { getSchool } from "../../api/api-utils";
 import { Preloader } from "../../components/Preloader/Preloader";
+import { useLikes } from "../../contexts/LikeContext";
 export const SchoolPage = () => {
   const [schools, setSchools] = useState<Ischool[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const { likeSchool, likes } = useLikes();
   const { id } = useParams<{ id: string }>();
   useEffect(() => {
     if (schools.length === 0) {
@@ -54,8 +56,12 @@ export const SchoolPage = () => {
               <h4>Учился здесь? Оцени по 5 бальной шкале: </h4>
               <div className={Styles["school-star__raiting"]}></div>
               <div className={Styles["school-likes__column"]}>
-                <button className={Styles["school-likes__button"]}>
-                  Like {school.likes}
+                <button
+                  className={Styles["school-likes__button"]}
+                  onClick={() => likeSchool(school._id)}
+                  disabled={!!likes[school._id]}
+                >
+                  {likes[school._id] ? "Liked" : "Like"}
                 </button>
               </div>
             </div>
