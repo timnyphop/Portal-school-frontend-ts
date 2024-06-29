@@ -10,15 +10,17 @@ interface User {
   name: string;
   email: string;
 }
+
 interface Token {
   token: string;
 }
+
 interface AuthContextType {
   isAuthenticated: boolean;
   user: User | null;
   login: (userData: User) => void;
   logout: () => void;
-  saveToken: (token: Token) => void;
+  saveToken: (token: string) => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -28,7 +30,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState<User | null>(null);
-  const [token, setToken] = useState<Token | null>(null);
+  const [token, setToken] = useState<string | null>(null);
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -40,7 +42,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     }
 
     if (storedToken) {
-      setToken(JSON.parse(storedToken));
+      setToken(storedToken);
     }
   }, []);
 
@@ -50,9 +52,9 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     localStorage.setItem("user", JSON.stringify(userData));
   };
 
-  const saveToken = (token: Token) => {
+  const saveToken = (token: string) => {
     setToken(token);
-    localStorage.setItem("token", JSON.stringify(token));
+    localStorage.setItem("token", token);
   };
 
   const logout = () => {

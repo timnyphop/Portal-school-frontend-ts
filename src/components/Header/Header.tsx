@@ -49,7 +49,9 @@ export const Header = () => {
 
             {isAuthenticated ? (
               <div className={Styles["user-info"]}>
-                <span>{user?.name}</span>
+                <span className={Styles["name__user"]}>
+                  {user ? user.name : "Loading..."} 🧑🏾‍💻
+                </span>
                 <button onClick={logout} className={Styles["logout-button"]}>
                   Выйти
                 </button>

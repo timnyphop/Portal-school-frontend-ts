@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "../pages/Layout/Layout";
-import { Home } from "../pages/Home/Home";
+import { Home } from "../pages/Home/home";
 import { SchoolPage } from "../pages/School2/School2";
 import { ErrorNotFound } from "../pages/Error/Error";
 import { PromoPage } from "../pages/Promo/Promo";

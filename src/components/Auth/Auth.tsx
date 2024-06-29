@@ -54,8 +54,8 @@ export const AuthModal: React.FC = () => {
 
       // Обработка успешного запроса
       const data = await response.json();
-      login({ name: data.name, email: data.email }); // Вызов функции login из контекста для сохранения данных пользователя
-      saveToken({ token: data.token }); // Сохранение токена
+      login({ name: data.user.name, email: data.user.email }); // Вызов функции login из контекста для сохранения данных пользователя
+      saveToken(data.token); // Сохранение токена
       closeModal(); // Закрытие модального окна
     } catch (error) {
       console.error("Caught Error:", error);
@@ -79,7 +79,7 @@ export const AuthModal: React.FC = () => {
           {!isLogin && (
             <>
               <div className={Styles["formGroup"]}>
-                <label htmlFor="name">Name:</label>
+                <label htmlFor="name">Name: </label>
                 <input
                   type="text"
                   id="name"
@@ -89,7 +89,7 @@ export const AuthModal: React.FC = () => {
                 />
               </div>
               <div className={Styles["formGroup"]}>
-                <label htmlFor="age">Age:</label>
+                <label htmlFor="age">Age: </label>
                 <input
                   type="number"
                   id="age"
@@ -101,7 +101,7 @@ export const AuthModal: React.FC = () => {
             </>
           )}
           <div className={Styles["formGroup"]}>
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email">Email: </label>
             <input
               type="email"
               id="email"
@@ -111,7 +111,7 @@ export const AuthModal: React.FC = () => {
             />
           </div>
           <div className={Styles["formGroup"]}>
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password">Password: </label>
             <input
               type="password"
               id="password"
@@ -140,7 +140,7 @@ export const AuthModal: React.FC = () => {
           >
             {isLogin ? "Switch to Register" : "Switch to Login"}
           </button>
-          {error && <div className={Styles["error"]}>{error}</div>}
+          {error && <div className={Styles["error"]}>{error} </div>}
         </form>
       </div>
     </div>

@@ -73,3 +73,18 @@
 .link {
   text-decoration: none;
 }
+
+.name__user {
+  align-items: center;
+  margin-right: 5px;
+}
+.personal {
+  font-size: 18px;
+  margin-right: 40px;
+}
+.smail__pers {
+  display: flex;
+}
+.logout-button {
+  align-items: center;
+}
